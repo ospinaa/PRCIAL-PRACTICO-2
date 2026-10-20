@@ -9,7 +9,7 @@ export class ReservationsController {
   constructor(private readonly reservationsService: ReservationsService) {}
 
 @Post()
-create(@Body(requestValidationPipe) DocumentTimeline: CreateReservationDto){
+create(@Body(requestValidationPipe) dto: CreateReservationDto){
   return this.reservationsService.create (dto);
 }
 
